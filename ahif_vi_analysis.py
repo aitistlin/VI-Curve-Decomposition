@@ -293,7 +293,7 @@ if __name__ == '__main__':
 
     show_current(data, num, N)
     current, voltage, timestamp, Nf = getcv(data, num, normalize=normalize_label)
-    fs = 50 * Nf
+    fs = base_fs * Nf
     print(f'Sampling rate{fs}')
 
     L_area = []
