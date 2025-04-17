@@ -22,7 +22,7 @@ Each `.csv` file in `demo_data/` contains three columns:
 During the use of the Python script, the following parameters need to be modified in line 283 of the code:
 num: Indicates the starting index for data analysis.
 
-N: Specifies the length of the data segment to be analyzed.
+N: Specifies the number of fundamental frequency cycles to be analyzed.
 
 base_fs: Represents the fundamental frequency (in Hz), typically 50 Hz for power systems.
 
