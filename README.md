@@ -19,7 +19,23 @@ Each `.csv` file in `demo_data/` contains three columns:
 
 ## Usage
 
-Run the script with your `.csv` file as input:
+During the use of the Python script, the following parameters need to be modified in line 283 of the code:
+num: Indicates the starting index for data analysis.
+
+N: Specifies the length of the data segment to be analyzed.
+
+base_fs: Represents the fundamental frequency (in Hz), typically 50 Hz for power systems.
+
+filename: The name of the CSV file containing the data.
+
+file_path: Automatically constructs the full path to the data file based on the current script location and the demo_data folder.
+
+These parameters allow you to control the data source and the segment of data used for analysis.
 
 ```bash
-python ahif_vi_analysis.py demo_data/sample1.csv
+  num = 32850
+  N = 400
+  filename = '131.CSV'
+  base_fs = 50
+  file_path = os.path.join(os.path.dirname(__file__), 'demo_data', filename)
+  data = pd.read_csv(file_path)
